@@ -1,9 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+
     tools:context=".activity.Login">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:src="@drawable/image_1"
+        android:background="#1E000000"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#14000000"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:textColor="#F61C0C"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign in to continue"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Username"
+            android:layout_marginBottom="40dp"
+            android:drawableStart="@drawable/icon_person"
+            android:background="@drawable/edtdangnhap"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Password"
+            android:layout_marginBottom="20dp"
+            android:drawableStart="@drawable/icon_lock"
+            android:background="@drawable/edtdangnhap"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nhớ mật khẩu ?"
+            />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#DD1D1D"
+            android:text="Đăng nhập"
+            />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
