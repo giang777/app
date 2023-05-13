@@ -1,16 +1,16 @@
-package com.example.appagile;
+package com.example.appagile.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.appagile.R;
+
+public class Login extends AppCompatActivity {
 
     @Override
-    //Xin chào ae :))
-    //XIn chào 2
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
     }
 }
