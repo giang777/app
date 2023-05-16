@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single">
+    <item
+        android:title="@string/menu_titel1"
+        >
+        <menu>
+            <item
+                android:id="@+id/menu_titel1_trangChu"
+                android:title="Trang chủ"
+                android:icon="@drawable/icon_home"
+                />
+            <item
+                android:id="@+id/menu_titel1_phieuMuon"
+                android:title="Quản lý phiếu mượn"
+                android:icon="@drawable/icon_pmuon"
+                />
+            <item
+                android:id="@+id/menu_titel1_loaiSach"
+                android:title="Quản lý loại sách"
+                android:icon="@drawable/icon_books"
+                />
+            <item
+                android:id="@+id/menu_titel1_sach"
+                android:title="Quản lý sách"
+                android:icon="@drawable/icon_book_1"
+                />
+
+
+            <item
+                android:id="@+id/menu_titel1_thanhVien"
+                android:title="Quản lý thành viên"
+                android:icon="@drawable/icon_member"
+                />
+
+        </menu>
+
+    </item>
+
+    <item
+        android:title="@string/menu_titel2"
+
+        >
+        <menu>
+            <item
+                android:id="@+id/menu_titel2_doanhThu"
+                android:title="Doanh thu"
+                android:icon="@drawable/icon_doanhthu"
+                />
+            <item
+                android:id="@+id/menu_titel2_top"
+                android:title="Top 10 sách"
+                android:icon="@drawable/icon_top"
+                />
+        </menu>
+
+    </item>
+
+    <item
+        android:title="@string/menu_titel3"
+
+        >
+        <menu>
+            <item
+                android:id="@+id/menu_titel3_newUSer"
+                android:title="Tạo tài khoản"
+                android:icon="@drawable/icon_person"
+                />
+            <item
+                android:id="@+id/menu_titel3_change_Password"
+                android:title="Đổi mật khẩu"
+                android:icon="@drawable/icon_lock_1"
+                />
+
+            <item
+                android:id="@+id/menu_titel3_log_out"
+                android:title="Đăng xuất"
+                android:icon="@drawable/icon_logout"
+                />
+
+
+        </menu>
+
+    </item>
+
+</group>
+
+
+</menu>

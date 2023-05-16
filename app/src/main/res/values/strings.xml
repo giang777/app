@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">appAgile</string>
+    <string name="menu_titel1">Quản lý</string>
+    <string name="menu_titel2">Thống kê</string>
+    <string name="menu_titel3">Tài khoản</string>
+    <string name="Open">open</string>
+    <string name="Close">close</string>
+
 </resources>
