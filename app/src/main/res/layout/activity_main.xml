@@ -33,6 +33,7 @@
             android:layout_height="match_parent"/>
 
 
+
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -41,7 +42,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:itemTextColor="@color/white"
-        android:background="#F44336"
+        android:background="#C92F2F"
         app:menu="@menu/item_navigation"
         app:headerLayout="@layout/header_layout_admin"
         />
