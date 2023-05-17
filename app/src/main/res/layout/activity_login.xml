@@ -41,6 +41,7 @@
             />
 
         <EditText
+            android:id="@+id/avtivity_login_TK"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Username"
@@ -50,20 +51,24 @@
             />
 
         <EditText
+            android:id="@+id/avtivity_login_MK"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Password"
+            android:inputType="textPassword"
             android:layout_marginBottom="20dp"
             android:drawableStart="@drawable/icon_lock"
             android:background="@drawable/edtdangnhap"
             />
         <CheckBox
+            android:id="@+id/avtivity_login_CKB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nhớ mật khẩu ?"
             />
 
         <Button
+            android:id="@+id/avtivity_login_BTN"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
