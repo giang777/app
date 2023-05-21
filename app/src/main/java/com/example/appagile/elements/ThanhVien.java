@@ -5,15 +5,15 @@ import java.io.Serializable;
 public class ThanhVien implements Serializable {
     private int id;
     private String name;
-    private String date;
+    private String sđt;
 
     public ThanhVien() {
     }
 
-    public ThanhVien(int id, String name, String date) {
+    public ThanhVien(int id, String name, String sđt) {
         this.id = id;
         this.name = name;
-        this.date = date;
+        this.sđt = sđt;
     }
 
     public int getId() {
@@ -32,12 +32,12 @@ public class ThanhVien implements Serializable {
         this.name = name;
     }
 
-    public String getDate() {
-        return date;
+    public String getSđt() {
+        return sđt;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setSđt(String sđt) {
+        this.sđt = sđt;
     }
 
     @Override

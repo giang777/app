@@ -25,7 +25,7 @@ public class Data extends SQLiteOpenHelper {
         String createTableThanhVien="create table ThanhVien (" +
                 "maTV INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "hoTen text NOT NULL, " +
-                "namSinh text NOT NULL)";
+                "sđt text NOT NULL)";
         db.execSQL(createTableThanhVien);
 
         String createTableLoaiSach="create table LoaiSach (" +

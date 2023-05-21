@@ -24,14 +24,14 @@ public class ThanhVienDao {
     public long insert(ThanhVien tv){
         ContentValues values = new ContentValues();
         values.put("hoTen",tv.getName());
-        values.put("namSinh",tv.getDate());
+        values.put("sđt",tv.getSđt());
         return db.insert("ThanhVien",null,values);
     }
 
-    public long update(ThanhVien tv){
+    public int update(ThanhVien tv){
         ContentValues values = new ContentValues();
         values.put("hoTen",tv.getName());
-        values.put("namSinh",tv.getDate());
+        values.put("sđt",tv.getSđt());
         return db.update("ThanhVien",values,"maTV=?",new String[]{String.valueOf(tv.getId())});
     }
 
@@ -61,7 +61,7 @@ public class ThanhVienDao {
             ThanhVien tv = new ThanhVien();
             tv.setId(Integer.parseInt(c.getString(0)));
             tv.setName(c.getString(1));
-            tv.setDate(c.getString(2));
+            tv.setSđt(c.getString(2));
             list.add(tv);
         }
         return list;
