@@ -23,15 +23,13 @@ public class LoaiSachDao {
 
     public long insert(LoaiSach ls){
         ContentValues values = new ContentValues();
-        values.put("tenLoai",ls.getName());
-        values.put("nhaSX",ls.getLoai());
+        values.put("tenLoai",ls.getNameLs());
         return db.insert("LoaiSach",null,values);
     }
 
     public long update(LoaiSach ls){
         ContentValues values = new ContentValues();
-        values.put("tenLoai",ls.getName());
-        values.put("nhaSX",ls.getLoai());
+        values.put("tenLoai",ls.getNameLs());
         return db.update("LoaiSach",values,"maLoai=?",new String[]{String.valueOf(ls.getId())});
     }
 
@@ -61,8 +59,7 @@ public class LoaiSachDao {
         while (c.moveToNext()){
            LoaiSach ls = new LoaiSach();
            ls.setId(Integer.parseInt(c.getString(0)));
-           ls.setLoai(c.getString(1));
-           ls.setName(c.getString(2));
+           ls.setNameLs(c.getString(1));
            list.add(ls);
         }
 

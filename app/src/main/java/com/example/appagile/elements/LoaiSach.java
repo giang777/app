@@ -4,16 +4,14 @@ import java.io.Serializable;
 
 public class LoaiSach implements Serializable {
     private int id;
-    private String name;
-    private String loai;
+    private String nameLs;
 
     public LoaiSach() {
     }
 
-    public LoaiSach(int id, String name,String loai) {
+    public LoaiSach(int id, String nameLs) {
         this.id = id;
-        this.name = name;
-        this.loai = loai;
+        this.nameLs = nameLs;
     }
 
     public int getId() {
@@ -24,24 +22,16 @@ public class LoaiSach implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNameLs() {
+        return nameLs;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLoai() {
-        return loai;
-    }
-
-    public void setLoai(String loai) {
-        this.loai = loai;
+    public void setNameLs(String nameLs) {
+        this.nameLs = nameLs;
     }
 
     @Override
     public String toString() {
-        return ""+id+"\n"+name+"";
+        return ""+id+"\n"+nameLs+"";
     }
 }

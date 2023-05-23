@@ -3,12 +3,13 @@ package com.example.appagile.dao;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
 public class Data extends SQLiteOpenHelper {
     private static final String NAME_DATABASE = "thu_vien.db";
-    private static final int VERSION = 1;
+    private static final int VERSION = 2;
 
     public Data(@Nullable Context context) {
         super(context, NAME_DATABASE, null, VERSION);
@@ -29,8 +30,7 @@ public class Data extends SQLiteOpenHelper {
         db.execSQL(createTableThanhVien);
 
         String createTableLoaiSach="create table LoaiSach (" +
-                "maLoai INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "nhaSX text NOT NULL," +
+                "maLoai INTEGER PRIMARY KEY AUTOINCREMENT, "+
                 "tenLoai text NOT NULL)";
         db.execSQL(createTableLoaiSach);
 
@@ -51,8 +51,8 @@ public class Data extends SQLiteOpenHelper {
                 "traSach INTEGER NOT NULL )";
         db.execSQL(createTablePhieuMuon);
 
-        String tk_admin = "INSERT INTO ThuThu VALUES('ADMIN','Nguyễn Minh Giang','0343729937')";
-        db.execSQL(tk_admin);
+        String admin = "INSERT INTO ThuThu VALUES('ADMIN','Nguyễn Minh Giang','123456')";
+        db.execSQL(admin);
     }
 
     @Override
