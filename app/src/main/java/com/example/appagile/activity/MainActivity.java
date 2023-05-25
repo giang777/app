@@ -18,6 +18,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.appagile.R;
+import com.example.appagile.elements.ThuThu;
 import com.example.appagile.fragment.quan_ly.QuanLyLoaiSach;
 import com.example.appagile.fragment.quan_ly.QuanLyPhieuMuon;
 import com.example.appagile.fragment.quan_ly.QuanLySach;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
     private NavigationView navigationView;
     private View view;
     private LayoutInflater inflater;
+    public static ThuThu thuThuLogin;
     @Override
     //Xin chào ae :))
     //XIn chào 2
@@ -46,6 +48,9 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
         this.drawerLayout = findViewById(R.id.drawerLayout);
         this.toolbar = findViewById(R.id.toolBar);
         this.navigationView = findViewById(R.id.NavigationDrawer);
+
+        Bundle bundle = getIntent().getExtras();
+        this.thuThuLogin = (ThuThu) bundle.getSerializable("thuthuLogin");
 
         setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

@@ -23,7 +23,7 @@ public class PhieuMuonDao {
 
     public long insert(PhieuMuon phieuMuon){
         ContentValues values = new ContentValues();
-        values.put("maTT",phieuMuon.getMaTT());
+        values.put("taikhoanTT",phieuMuon.getMaTT());
         values.put("maTV",phieuMuon.getMaTV());
         values.put("maSach",phieuMuon.getMaSach());
         values.put("tienThue",phieuMuon.getPrice());
@@ -32,9 +32,9 @@ public class PhieuMuonDao {
         return db.insert("PhieuMuon",null,values);
     }
 
-    public long update(PhieuMuon phieuMuon){
+    public int update(PhieuMuon phieuMuon){
         ContentValues values = new ContentValues();
-        values.put("maTT",phieuMuon.getMaTT());
+        values.put("taikhoanTT",phieuMuon.getMaTT());
         values.put("maTV",phieuMuon.getMaTV());
         values.put("maSach",phieuMuon.getMaSach());
         values.put("tienThue",phieuMuon.getPrice());
