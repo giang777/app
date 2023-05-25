@@ -34,6 +34,7 @@ public class EditSach extends Dialog {
     private LoaiSachDao loaiSachDao;
     ArrayList<LoaiSach> listLoaiSach;
     private Integer maloai;
+    int position;
 
     public EditSach(@NonNull Context context, Sach sach, Load_list listSach) {
         super(context);
@@ -56,7 +57,12 @@ public class EditSach extends Dialog {
         adapterSpinner = new SpinnerLoaiSach(context,listLoaiSach);
         spinnerLoai.setAdapter(adapterSpinner);
 
-
+        for (int i =0 ; i<listLoaiSach.size();i++){
+            if(sach.getMaloai() == (listLoaiSach.get(i).getId())){
+                position =i;
+            }
+            spinnerLoai.setSelection(position);
+        }
         spinnerLoai.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
