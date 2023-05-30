@@ -30,12 +30,12 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 String tk = editText1.getText().toString();
                 String mk = editText2.getText().toString();
-                int ckeck = dao.checkLogin(tk.toUpperCase(),mk);
+                int ckeck = dao.checkLogin(tk,mk);
 
                 if(ckeck == 1){
                     Toast.makeText(Login.this, "Thành công", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Login.this,MainActivity.class);
-                    ThuThu thuThu = dao.getID(tk.toUpperCase());
+                    ThuThu thuThu = dao.getID(tk);
                     intent.putExtra("thuthuLogin",thuThu);
                     startActivity(intent);
                 }else{

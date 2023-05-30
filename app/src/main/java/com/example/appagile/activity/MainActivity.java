@@ -113,15 +113,14 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
                 Toast.makeText(this, "Doanh thu", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.menu_titel3_newUSer:
-                load_fragment(new TaoTaiKhoan());
-//                if(thuThu.getTkTT().equals("Admin")){
-//                    setTitle("Tạo tài khoản");
-//                    load_fragment(new TaoTaiKhoan());
-//                    drawerLayout.closeDrawer(GravityCompat.START);
-//                    Toast.makeText(this, "Tạo tài khoản", Toast.LENGTH_SHORT).show();
-//                }else{
-//                    Toast.makeText(this, "Chức năng này chỉ dành cho Admin", Toast.LENGTH_SHORT).show();
-//                }
+                if(thuThuLogin.getTkTT().equalsIgnoreCase("Admin")){
+                    setTitle("Tạo tài khoản");
+                    load_fragment(new TaoTaiKhoan());
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    Toast.makeText(this, "Tạo tài khoản", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(this, "Chức năng này chỉ dành cho Admin", Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.menu_titel3_change_Password:
                 setTitle("Đổi mật khẩu");
