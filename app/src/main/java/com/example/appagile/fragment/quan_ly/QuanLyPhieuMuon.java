@@ -47,7 +47,8 @@ public class QuanLyPhieuMuon extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         recyclerView = view.findViewById(R.id.Fragment_phieuMuonTrue_RecycelView);
         button = view.findViewById(R.id.Fragment_PhieuMuon_FloatBTN);
-
+//        PhieuMuonDao phieuMuonDao = new PhieuMuonDao(getActivity());
+//        phieuMuonDao.delete_all();
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

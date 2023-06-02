@@ -23,6 +23,7 @@ import com.example.appagile.fragment.quan_ly.QuanLyLoaiSach;
 import com.example.appagile.fragment.quan_ly.QuanLyPhieuMuon;
 import com.example.appagile.fragment.quan_ly.QuanLySach;
 import com.example.appagile.fragment.quan_ly.QuanLyThanhVien;
+import com.example.appagile.fragment.quan_ly.TrangChu;
 import com.example.appagile.fragment.tai_khoan.DoiMatKhau;
 import com.example.appagile.fragment.tai_khoan.TaoTaiKhoan;
 import com.example.appagile.fragment.thong_ke.DoanhThu;
@@ -73,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
             case R.id.menu_titel1_trangChu:
                 setTitle("Trang chủ");
                 drawerLayout.closeDrawer(GravityCompat.START);
-                load_fragment(new QuanLyThanhVien());
+                load_fragment(new TrangChu());
                 Toast.makeText(this, "Trang chủ", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.menu_titel1_thanhVien:
@@ -146,6 +147,12 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
         }
 
         return true;
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        load_fragment(new TrangChu());
     }
 
     private void load_fragment(Fragment fragment){

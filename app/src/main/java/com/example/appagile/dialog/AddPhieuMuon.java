@@ -104,13 +104,32 @@ public class AddPhieuMuon extends Dialog {
         date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatePickerDialog datePickerDialog = new DatePickerDialog(context, new DatePickerDialog.OnDateSetListener() {
+                Calendar calendar = Calendar.getInstance();
+                int day = calendar.get(Calendar.DAY_OF_MONTH);
+                int month = calendar.get(Calendar.MONTH);
+                int year = calendar.get(Calendar.YEAR);
+
+                DatePickerDialog dialog = new DatePickerDialog(context, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
-                        date.setText(i+"-"+(i1+1)+"-"+i2);
+                        int thg = i1 + 1;
+                        if(thg < 10 ){
+                            if(i2 < 10){
+                                date.setText(""+i+"-0"+thg+"-0"+i2+"");
+                            }else{
+                                date.setText(""+i+"-0"+thg+"-"+i2+"");
+                            }
+                        }else{
+                            if(i2 < 10){
+                                date.setText(""+i+"-"+thg+"-0"+i2+"");
+                            }else{
+                                date.setText(""+i+"-"+thg+"-"+i2+"");
+                            }
+                        }
+
                     }
-                }, Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH),Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
-                datePickerDialog.show();
+                },year,month,day);
+                dialog.show();
             }
         });
 

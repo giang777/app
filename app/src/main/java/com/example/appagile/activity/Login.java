@@ -49,9 +49,10 @@ public class Login extends AppCompatActivity {
                 if(ckeck == 1){
                     Toast.makeText(Login.this, "Thành công", Toast.LENGTH_SHORT).show();
                     rememberUser(tk,mk,chkrem.isChecked());
-                    Intent i = new Intent(getApplicationContext(),MainActivity.class);
-                    i.putExtra("user",tk);
-                    startActivity(i);
+                    Intent intent = new Intent(Login.this,MainActivity.class);
+                    ThuThu thuThu = dao.getID(tk);
+                    intent.putExtra("thuthuLogin",thuThu);
+                    startActivity(intent);
                     finish();
                 }else{
                     Toast.makeText(Login.this, "Thất bại", Toast.LENGTH_SHORT).show();

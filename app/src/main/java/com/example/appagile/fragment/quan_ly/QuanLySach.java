@@ -22,6 +22,7 @@ import com.example.appagile.dialog.AddLoaiSach;
 import com.example.appagile.dialog.AddSach;
 import com.example.appagile.elements.LoaiSach;
 import com.example.appagile.elements.Sach;
+import com.example.appagile.elements.ThanhVien;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -67,6 +68,32 @@ public class QuanLySach extends Fragment {
                 });
                 addSach.show();
                 addSach.setCancelable(true);
+            }
+        });
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                List<Sach> sachList = new ArrayList<>();
+
+                if(s.equals("")){
+                    itemSach.setList(list);
+                }else{
+                    for(Sach item : list){
+                        if(item.getName().toLowerCase().contains(s.toLowerCase())){
+                            sachList.add(item);
+                        }
+                    }
+                    itemSach.setList(sachList);
+                }
+
+
+                return true;
             }
         });
 
