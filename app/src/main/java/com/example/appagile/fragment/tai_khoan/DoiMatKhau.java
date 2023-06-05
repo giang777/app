@@ -81,7 +81,7 @@ public class DoiMatKhau extends Fragment {
     private int validate(){
         int check =1;
         if(oldpass.getText().length() <=0 || newpass.getText().length() <=0 || renewpass.getText().length() <=0) {
-            Toast.makeText(getActivity(), "Không được để chống", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Không được để trống", Toast.LENGTH_SHORT).show();
         }else{
             SharedPreferences pref = getActivity().getSharedPreferences("USER_FILE",Context.MODE_PRIVATE);
             String passold = pref.getString("PASSWORD","");

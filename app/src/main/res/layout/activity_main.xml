@@ -22,7 +22,7 @@
                 android:id="@+id/toolBar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#F44336"
+                android:background="#2F6DC9"
                 android:theme="@style/ThemeOverlay.AppCompat.Light"/>
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -42,7 +42,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:itemTextColor="@color/white"
-        android:background="#C92F2F"
+        android:background="#2F6DC9"
         app:menu="@menu/item_navigation"
         app:headerLayout="@layout/header_layout_admin"
         />

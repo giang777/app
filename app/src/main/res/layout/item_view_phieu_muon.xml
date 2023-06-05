@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="10"
-        android:background="#E53935"
+        android:background="#2F6DC9"
         >
 
         <ImageView

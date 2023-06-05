@@ -67,7 +67,7 @@ public class ItemPhieuMuon extends RecyclerView.Adapter<ItemPhieuMuon.PhieuMuonH
         holder.price.setText("Giá : " + String.valueOf(phieuMuon.getPrice()));
         holder.date.setText("Ngày mượn : " + phieuMuon.getDate());
         if(phieuMuon.getTrangThai() == 0){
-            holder.status.setTextColor(Color.parseColor("#625DB9"));
+            holder.status.setTextColor(Color.parseColor("#DD1D1D"));
             holder.status.setText("Trạng thái : " + "Chưa trả");
             holder.check.setVisibility(View.VISIBLE);
         }else{
