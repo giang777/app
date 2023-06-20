@@ -6,7 +6,8 @@
     android:padding="20dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#2F6DC9"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center">
 
 
     <androidx.cardview.widget.CardView
@@ -26,13 +27,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Xin chào ! Nguyễn Minh Giang"
+        android:text="Xin chào !"
         android:textColor="@color/white"
         android:textSize="20sp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Vai trò : Quản trị viên"
-        android:textColor="#FB8C00"
-        android:textSize="20sp"/>
+
 </LinearLayout>
