@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
     }
 
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         switch (id){
             case R.id.menu_titel1_trangChu:
